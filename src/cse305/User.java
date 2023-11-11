@@ -52,13 +52,13 @@ public class User {
     public void UpdateProfile() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Please enter your new first name: ");
-        this.firstName = sc.nextLine()
+        this.firstName = sc.nextLine();
         
         System.out.println("Please enter your new last name: ");
         this.lastName = sc.nextLine();
         
         System.out.println("Please enter your new email: ");
-        this.email = sc.nextLine()
+        this.email = sc.nextLine();
     }
 
     public void ResetPassword() {
