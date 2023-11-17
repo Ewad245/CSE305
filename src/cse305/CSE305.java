@@ -14,7 +14,14 @@ public class CSE305 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        User user = User.builder()
+                .setId(1)
+                .setName("John Doe")
+                .setEmail("johndoe@example.com")
+                .setPhoneNumber("123-456-7890")
+                .setPassword("123 Main St")
+                .build();
+        System.out.println(user.getEmail());
     }
-    
+
 }
