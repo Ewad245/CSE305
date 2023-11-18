@@ -4,6 +4,9 @@
  */
 package cse305;
 
+
+import java.util.List;
+
 /**
  *
  * @author Student
@@ -14,14 +17,29 @@ public class CSE305 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        User user = User.builder()
-                .setId(1)
-                .setName("John Doe")
-                .setEmail("johndoe@example.com")
-                .setPhoneNumber("123-456-7890")
-                .setPassword("123 Main St")
-                .build();
-        System.out.println(user.getEmail());
+//        User user = User.builder()
+//                .setId(1)
+//                .setName("John Doe")
+//                .setEmail("johndoe@example.com")
+//                .setPhoneNumber("123-456-7890")
+//                .setPassword("123 Main St")
+//                .build();
+//        System.out.println(user.getEmail());
+        List<RentalContract> list=null;
+        UserBuilderImpl uimp = new UserBuilderImpl();
+        uimp.setEmail("dadad");
+        TenantBuilderImp timp= new TenantBuilderImp();
+        timp.setPropList(list);
+        timp.setId(0);
+        timp.setName("Hello");
+        timp.setPassword("das");
+        timp.setPhoneNumber("21212121");
+        timp.setEmail("gsyda@gmail.com");
+        Tenant tent = timp.tbuild();
+        System.out.println(tent.getEmail());
+        
+                
+       
     }
 
 }

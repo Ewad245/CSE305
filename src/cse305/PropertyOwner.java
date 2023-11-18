@@ -6,10 +6,23 @@ package lab_cse305;
 
 import java.util.List;
 
-/**
- *
- * @author Student
- */
+
+public class PropertyOwner extends User{
+    
+    private String AuthenticationKey;
+    private int NumofProperties;
+
+    public PropertyOwner(UserBuilder builder,List<Property> ownedProperties) {
+        super(builder);
+        this.ownedProperties = ownedProperties;
+    }
+
+    //Contructors
+    //Default
+    //Method
+    public ArrayList ListProperty (ArrayList List) {
+        return List;
+}
 public class PropertyOwner extends User {
     private List<Property> ownedProperties;
 
@@ -22,7 +35,7 @@ public class PropertyOwner extends User {
         for (Property property : ownedProperties) {
             System.out.println(property.toString());
         }
-    }
+    
 
     public void createProperty(String propertyName, double rentalRate, String location) {
         int propertyID = generatePropertyID();

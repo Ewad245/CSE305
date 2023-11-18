@@ -6,6 +6,7 @@ public class Property {
     int PropertyID;
     String Description;
     float RentalRate;
+    
     //Contructor
     //Default
     //Method
