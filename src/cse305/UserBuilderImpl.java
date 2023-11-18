@@ -17,27 +17,23 @@ class UserBuilderImpl implements UserBuilder {
     private String password;
 
     @Override
-    public UserBuilder setId(int id) {
+    public void setId(int id) {
         this.id = id;
-        return this;
     }
 
     @Override
-    public UserBuilder setName(String name) {
+    public void setName(String name) {
         this.name = name;
-        return this;
     }
 
     @Override
-    public UserBuilder setEmail(String email) {
+    public void setEmail(String email) {
         this.email = email;
-        return this;
     }
 
     @Override
-    public UserBuilder setPhoneNumber(String phoneNumber) {
+    public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
-        return this;
     }
 
     @Override
@@ -66,9 +62,8 @@ class UserBuilderImpl implements UserBuilder {
     }
 
     @Override
-    public UserBuilder setPassword(String password) {
+    public void setPassword(String password) {
        this.password=password;
-       return this;
     }
 
     @Override

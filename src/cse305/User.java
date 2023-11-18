@@ -38,6 +38,7 @@ public class User {
     public static UserBuilder builder() {
         return new UserBuilderImpl();
     }
+     
 
     //Methods
 //    public void Register() {
@@ -98,4 +99,4 @@ public class User {
 //            System.err.println("Wrong password, please re-enter again!");
 //            enterPassword = sc.nextLine();
 //
-}
+            }

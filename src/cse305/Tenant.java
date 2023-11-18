@@ -1,4 +1,4 @@
-package lab_cse305;
+package cse305;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,21 +7,30 @@ public class Tenant extends User {
 
     private List<RentalContract> rentedProperties;
 
-    public Tenant(String userID, String firstName, String lastName, String email, String password) {
-        super(userID, firstName, lastName, email, password);
-        rentedProperties = new ArrayList<>();
+    public Tenant(TenantBuilderImp tent) {
+        super(builder());
+        this.rentedProperties = tent.getList();
     }
 
-    public Tenant() {
+
+//    public Tenant(UserBuilder builder) {
+//        super(builder);
+//    }
+
+    public void setRentedProperties(List<RentalContract> rentedProperties) {
+        this.rentedProperties = rentedProperties;
     }
-    
-    
+
+    public static TenantBuilder tbuilder() {
+        return new TenantBuilderImp();
+    }
+
     public List<RentalContract> getRentedProperties() {
         return new ArrayList<>(rentedProperties); // Return a copy to prevent external modification
     }
 
     public void createRentalContract(Property property, int durationMonths) {
-       
+
         RentalContract newContract = new RentalContract(property, durationMonths);
         rentedProperties.add(newContract);
 
