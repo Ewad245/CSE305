@@ -30,12 +30,7 @@ public class CSE305 {
         uimp.setEmail("dadad");
         TenantBuilderImp timp= new TenantBuilderImp();
         timp.setPropList(list);
-        timp.setId(0);
-        timp.setName("Hello");
-        timp.setPassword("das");
-        timp.setPhoneNumber("21212121");
-        timp.setEmail("gsyda@gmail.com");
-        Tenant tent = timp.tbuild();
+        Tenant tent = timp.BuildTenent(uimp);
         System.out.println(tent.getEmail());
         
                 

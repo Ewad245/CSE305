@@ -6,9 +6,10 @@ import java.util.List;
 public class Tenant extends User {
 
     private List<RentalContract> rentedProperties;
+    private int TenantID;
 
-    public Tenant(TenantBuilderImp tent) {
-        super(builder());
+    public Tenant(TenantBuilderImp tent, UserBuilder builder) {
+        super(builder);
         this.rentedProperties = tent.getList();
     }
 

@@ -10,7 +10,7 @@ import java.util.List;
  *
  * @author Admin
  */
-public class TenantBuilderImp extends UserBuilderImpl implements TenantBuilder {
+public class TenantBuilderImp implements TenantBuilder {
 
     private List<RentalContract> rentedProperties;
 
@@ -25,8 +25,9 @@ public class TenantBuilderImp extends UserBuilderImpl implements TenantBuilder {
     }
 
     @Override
-    public Tenant tbuild() {
-        return new Tenant(this);
+    public Tenant BuildTenent(UserBuilder userbuild) {
+        return new Tenant(this,userbuild);
     }
+
 
 }

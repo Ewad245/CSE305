@@ -11,5 +11,5 @@ import java.util.*;
 public interface TenantBuilder{
     void setPropList(List<RentalContract> rentedProperties);
     List<RentalContract> getList();
-    Tenant tbuild();
+    Tenant BuildTenent(UserBuilder userbuild);
 }

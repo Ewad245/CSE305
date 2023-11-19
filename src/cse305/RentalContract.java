@@ -11,28 +11,28 @@ import java.util.Date;
  * @author Student
  */
 public class RentalContract {
-     private int contractID;
+    private int contractID;
     private int propertyID;
     private int tenantID;
     private Date startDate;
     private Date endDate;
-    private double rentAmount;
+    private float rentAmount;
 
     // Constructor
 
-    public RentalContract(Property property, int durationMonths) {
-        
-        
-    }
+//    public RentalContract(Property property, int durationMonths) {
+//        
+//        
+//    }
     
 
-    public RentalContract(int contractID, int propertyID, int tenantID, Date startDate, Date endDate, double rentAmount) {
-        this.contractID = contractID;
-        this.propertyID = propertyID;
-        this.tenantID = tenantID;
-        this.startDate = startDate;
-        this.endDate = endDate;
-        this.rentAmount = rentAmount;
+    public RentalContract(RentalContractBuilder builder) {
+        this.contractID = builder.getContractID();
+        this.propertyID = builder.getPropertyID();
+        this.tenantID = builder.getTenantID();
+        this.startDate = builder.getStartDate();
+        this.endDate = builder.getEndDate();
+        this.rentAmount = builder.getRent();
     }
     
     
