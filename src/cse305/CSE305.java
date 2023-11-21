@@ -25,13 +25,13 @@ public class CSE305 {
 //                .setPassword("123 Main St")
 //                .build();
 //        System.out.println(user.getEmail());
-        List<RentalContract> list=null;
-        UserBuilderImpl uimp = new UserBuilderImpl();
-        uimp.setEmail("dadad");
-        TenantBuilderImp timp= new TenantBuilderImp();
-        timp.setPropList(list);
-        Tenant tent = timp.BuildTenent(uimp);
-        System.out.println(tent.getEmail());
+//        List<RentalContract> list=null;
+//        UserBuilderImpl uimp = new UserBuilderImpl();
+//        uimp.setEmail("dadad");
+//        TenantBuilderImp timp= new TenantBuilderImp();
+//        timp.setPropList(list);
+//        Tenant tent = timp.BuildTenent(uimp);
+//        System.out.println(tent.getEmail());
         
                 
        

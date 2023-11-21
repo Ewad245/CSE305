@@ -6,15 +6,21 @@ public class Property {
     int PropertyID;
     String Description;
     float RentalRate;
+    String status;
     
     //Contructor
-    //Default
+    public Property(PropertyBuilder builder){
+        this.PropertyID=builder.getPropertyID();
+        this.Description=builder.getDescription();
+        this.RentalRate=builder.getRentalRate();
+        this.status="Vacant";
+    }
     //Method
     public void CreateProperty() {
         
     }
-    public void UpdateProperty() {
-        
+    public void UpdateProperty(String status) {
+        this.status=status;
     }
     public void DeleteProperty() {
         
