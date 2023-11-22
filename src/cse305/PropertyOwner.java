@@ -18,6 +18,9 @@ public class PropertyOwner extends User {
         AuthenticationKey = PropertyOwner.getAlphaNumericString(10);
 
     }
+    public PropertyOwner getOwner() {
+        return this;
+    }
 
     //Contructors
     //Default

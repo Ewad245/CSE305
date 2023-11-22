@@ -4,6 +4,7 @@
  */
 package cse305;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -12,22 +13,81 @@ import java.util.List;
  */
 public class TenantBuilderImp implements TenantBuilder {
 
-    private List<RentalContract> rentedProperties;
+    private ArrayList<RentalContract> rentedProperties;
+    private int id;
+    private String name;
+    private String email;
+    private String phoneNumber;
+    private String password;
 
     @Override
-    public void setPropList(List<RentalContract> rentedProperties) {
+    public void setPropList(ArrayList<RentalContract> rentedProperties) {
         this.rentedProperties = rentedProperties;
     }
 
     @Override
-    public List<RentalContract> getList() {
+    public ArrayList<RentalContract> getList() {
         return rentedProperties;
     }
 
     @Override
-    public Tenant BuildTenent(UserBuilder userbuild) {
-        return new Tenant(this,userbuild);
+    public void setId(int id) {
+        this.id = id;
     }
 
+    @Override
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    @Override
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    @Override
+    public User build() {
+        return new User(this);
+    }
+
+    @Override
+    public String getEmail() {
+        return email;
+    }
+
+    @Override
+    public int getId() {
+        return id;
+    }
+
+    @Override
+    public String getName() {
+        return name;
+    }
+
+    @Override
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    @Override
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    @Override
+    public String getPassword() {
+        return password;
+    }
+
+    @Override
+    public Tenant BuildTenent(UserBuilder userbuild) {
+        return new Tenant(this);
+    }
 
 }

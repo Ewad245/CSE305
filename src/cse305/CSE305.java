@@ -5,6 +5,7 @@
 package cse305;
 
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -25,13 +26,18 @@ public class CSE305 {
 //                .setPassword("123 Main St")
 //                .build();
 //        System.out.println(user.getEmail());
-//        List<RentalContract> list=null;
+        ArrayList<RentalContract> list=null;
 //        UserBuilderImpl uimp = new UserBuilderImpl();
 //        uimp.setEmail("dadad");
-//        TenantBuilderImp timp= new TenantBuilderImp();
-//        timp.setPropList(list);
-//        Tenant tent = timp.BuildTenent(uimp);
-//        System.out.println(tent.getEmail());
+        TenantBuilderImp timp= new TenantBuilderImp();
+        timp.setId(1);
+        timp.setName("asd");
+        timp.setPassword("afasf");
+        timp.setEmail("asda@afa");
+        timp.setPhoneNumber("05165");
+        timp.setPropList(null);
+        Tenant tent = timp.BuildTenent(timp);
+        System.out.println(tent.getEmail());
         
                 
        

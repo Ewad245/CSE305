@@ -8,8 +8,8 @@ import java.util.*;
  *
  * @author Admin
  */
-public interface TenantBuilder{
-    void setPropList(List<RentalContract> rentedProperties);
-    List<RentalContract> getList();
+public interface TenantBuilder extends UserBuilder{
+    void setPropList(ArrayList<RentalContract> rentedProperties);
+    ArrayList<RentalContract> getList();
     Tenant BuildTenent(UserBuilder userbuild);
 }

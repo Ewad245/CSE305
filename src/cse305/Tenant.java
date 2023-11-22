@@ -5,11 +5,11 @@ import java.util.List;
 
 public class Tenant extends User {
 
-    private List<RentalContract> rentedProperties;
+    private ArrayList<RentalContract> rentedProperties;
     private int TenantID;
 
-    public Tenant(TenantBuilder tent, UserBuilder builder) {
-        super(builder);
+    public Tenant(TenantBuilder tent) {
+        super(tent);
         this.rentedProperties = tent.getList();
     }
 
@@ -18,7 +18,7 @@ public class Tenant extends User {
 //        super(builder);
 //    }
 
-    public void setRentedProperties(List<RentalContract> rentedProperties) {
+    public void setRentedProperties(ArrayList<RentalContract> rentedProperties) {
         this.rentedProperties = rentedProperties;
     }
 
@@ -29,14 +29,17 @@ public class Tenant extends User {
     public List<RentalContract> getRentedProperties() {
         return new ArrayList<>(rentedProperties); // Return a copy to prevent external modification
     }
-
-    public void createRentalContract(Property property, int durationMonths) {
-
-        RentalContract newContract = new RentalContract(property, durationMonths);
-        rentedProperties.add(newContract);
-
-        System.out.println("Rental contract created successfully.");
+    public Tenant getTenant() {
+        return this;
     }
+
+//    public void createRentalContract(Property property, int durationMonths) {
+//
+//        RentalContract newContract = new RentalContract(property, durationMonths);
+//        rentedProperties.add(newContract);
+//
+//        System.out.println("Rental contract created successfully.");
+//    }
 
     public void terminateRentalContract(RentalContract contract) {
         if (rentedProperties.contains(contract)) {
