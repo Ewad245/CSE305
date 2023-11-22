@@ -21,7 +21,7 @@ public class TenantBuilderImp implements TenantBuilder {
     private String password;
 
     @Override
-    public void setPropList(ArrayList<RentalContract> rentedProperties) {
+    public void setRentalList(ArrayList<RentalContract> rentedProperties) {
         this.rentedProperties = rentedProperties;
     }
 

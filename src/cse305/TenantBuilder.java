@@ -9,7 +9,7 @@ import java.util.*;
  * @author Admin
  */
 public interface TenantBuilder extends UserBuilder{
-    void setPropList(ArrayList<RentalContract> rentedProperties);
+    void setRentalList(ArrayList<RentalContract> rentedProperties);
     ArrayList<RentalContract> getList();
     Tenant BuildTenent(UserBuilder userbuild);
 }
