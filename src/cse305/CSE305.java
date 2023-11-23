@@ -4,7 +4,6 @@
  */
 package cse305;
 
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,29 +17,7 @@ public class CSE305 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-//        User user = User.builder()
-//                .setId(1)
-//                .setName("John Doe")
-//                .setEmail("johndoe@example.com")
-//                .setPhoneNumber("123-456-7890")
-//                .setPassword("123 Main St")
-//                .build();
-//        System.out.println(user.getEmail());
-        ArrayList<RentalContract> list=null;
-//        UserBuilderImpl uimp = new UserBuilderImpl();
-//        uimp.setEmail("dadad");
-        TenantBuilderImp timp= new TenantBuilderImp();
-        timp.setId(1);
-        timp.setName("asd");
-        timp.setPassword("afasf");
-        timp.setEmail("asda@afa");
-        timp.setPhoneNumber("05165");
-        timp.setPropList(null);
-        Tenant tent = timp.BuildTenent(timp);
-        System.out.println(tent.getEmail());
         
-                
-       
     }
 
 }

@@ -12,12 +12,13 @@ public class PropertyOwner extends User {
     private String AuthenticationKey;
     private ArrayList<Property> ListProperty;
 
-    public PropertyOwner(UserBuilder builder) {
+    public PropertyOwner(PropertyOwnerBuilder builder) {
         super(builder);
-        ListProperty = null;
-        AuthenticationKey = PropertyOwner.getAlphaNumericString(10);
+        ListProperty = builder.getList();
+        AuthenticationKey = builder.getAuthenticKey();
 
     }
+
     public PropertyOwner getOwner() {
         return this;
     }
@@ -66,31 +67,5 @@ public class PropertyOwner extends User {
 //        }
     private int generatePropertyID() {
         return (int) (Math.random() * 1000);
-    }
-
-    private static String getAlphaNumericString(int n) {
-
-        // choose a Character random from this String 
-        String AlphaNumericString = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-                + "0123456789"
-                + "abcdefghijklmnopqrstuvxyz";
-
-        // create StringBuffer size of AlphaNumericString 
-        StringBuilder sb = new StringBuilder(n);
-
-        for (int i = 0; i < n; i++) {
-
-            // generate a random number between 
-            // 0 to AlphaNumericString variable length 
-            int index
-                    = (int) (AlphaNumericString.length()
-                    * Math.random());
-
-            // add Character one by one in end of sb 
-            sb.append(AlphaNumericString
-                    .charAt(index));
-        }
-
-        return sb.toString();
     }
 }

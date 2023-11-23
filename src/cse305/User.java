@@ -33,6 +33,9 @@ public class User {
     public String getPhoneNumber() {
         return phoneNumber;
     }
+    public String getPassword() {
+        return password;
+    }
 
 
     public static UserBuilder builder() {

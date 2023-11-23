@@ -22,17 +22,17 @@ public class ConcreteOwnerBuilder implements PropertyOwnerBuilder {
 
     @Override
     public void setPropList(ArrayList<Property> list) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        this.Proplist=list;
     }
 
     @Override
     public ArrayList<Property> getList() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        return Proplist;
     }
 
     @Override
     public PropertyOwner BuildOwner(UserBuilder userbuild) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        return new PropertyOwner(this);
     }
 
     @Override
