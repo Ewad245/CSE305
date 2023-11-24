@@ -23,6 +23,10 @@ public class PropertyOwner extends User {
         return this;
     }
 
+    public ArrayList<Property> getList() {
+        return ListProperty;
+    }
+
     //Contructors
     //Default
     //Method

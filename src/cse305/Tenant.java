@@ -6,18 +6,17 @@ import java.util.List;
 public class Tenant extends User {
 
     private ArrayList<RentalContract> rentedProperties;
-    private int TenantID;
+    private String TenantID;
 
     public Tenant(TenantBuilder tent) {
         super(tent);
         this.rentedProperties = tent.getList();
+        this.TenantID = tent.getTenantID();
     }
-
 
 //    public Tenant(UserBuilder builder) {
 //        super(builder);
 //    }
-
     public void setRentedProperties(ArrayList<RentalContract> rentedProperties) {
         this.rentedProperties = rentedProperties;
     }
@@ -29,6 +28,7 @@ public class Tenant extends User {
     public List<RentalContract> getRentedProperties() {
         return new ArrayList<>(rentedProperties); // Return a copy to prevent external modification
     }
+
     public Tenant getTenant() {
         return this;
     }
@@ -40,7 +40,6 @@ public class Tenant extends User {
 //
 //        System.out.println("Rental contract created successfully.");
 //    }
-
     public void terminateRentalContract(RentalContract contract) {
         if (rentedProperties.contains(contract)) {
             contract.terminateContract();

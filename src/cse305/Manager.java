@@ -18,16 +18,18 @@ public class Manager {
     }
 
     //Methods
-    public void Register(TenantBuilder builder) {
+    public User Register(TenantBuilder builder) {
         Tenant newTenant = new Tenant(builder);
         listTenant.add(newTenant);
         numOfTenant = listTenant.size();
+        return newTenant;
     }
 
-    public void Register(PropertyOwnerBuilder builder) {
+    public User Register(PropertyOwnerBuilder builder) {
         PropertyOwner newOwner = new PropertyOwner(builder);
         listOwner.add(newOwner);
         numOfOwner = listOwner.size();
+        return newOwner;
 
     }
 
@@ -47,6 +49,9 @@ public class Manager {
             }
         }
         return null;
+    }
+    public void addProperty(PropertyOwner owner,PropertyBuilder builder) {
+        owner.getList().add(builder.buildProperty());
     }
 
 }

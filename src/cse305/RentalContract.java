@@ -36,18 +36,18 @@ public class RentalContract {
     }
     
     
-     public void createContract(Property property, Tenant tenant, int durationMonths) {
-        // Logic to create a new rental contract
-        this.propertyID = property.getPropertyID();
-        this.tenantID = Integer.parseInt(tenant.getUserID());
-        this.startDate = new Date(); // Set the start date to the current date
-        // Calculate the end date based on the duration
-        // (Note: This is a simple example, and you might want to use a more robust method)
-        this.endDate = calculateEndDate(startDate, durationMonths);
-        this.rentAmount = property.getRentalRate() * durationMonths;
-
-        System.out.println("Rental contract created successfully.");
-    }
+//     public void createContract(Property property, Tenant tenant, int durationMonths) {
+//        // Logic to create a new rental contract
+//        this.propertyID = property.getPropertyID();
+//        this.tenantID = Integer.parseInt(tenant.getUserID());
+//        this.startDate = new Date(); // Set the start date to the current date
+//        // Calculate the end date based on the duration
+//        // (Note: This is a simple example, and you might want to use a more robust method)
+//        this.endDate = calculateEndDate(startDate, durationMonths);
+//        this.rentAmount = property.getRentalRate() * durationMonths;
+//
+//        System.out.println("Rental contract created successfully.");
+//    }
     public void terminateContract() {
       this.endDate = new Date(); // Set the end date to the current date
 
