@@ -22,10 +22,22 @@ public class PropertyOwner extends User {
     public PropertyOwner getOwner() {
         return this;
     }
+    public String getKey() {
+        return AuthenticationKey;
+    }
 
     public ArrayList<Property> getList() {
         return ListProperty;
     }
+    public Property findPropertyByID(int ID) {
+    for (int i=0;i<ListProperty.size();i++){
+        Property prop=ListProperty.get(i);
+        if(prop.getPropertyID()==ID){
+            return prop;
+        }
+    }
+    return null;
+}
 
     //Contructors
     //Default

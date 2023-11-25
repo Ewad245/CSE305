@@ -7,6 +7,7 @@ package cse305;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import java.lang.reflect.Field;
 
 /**
  *
@@ -20,11 +21,6 @@ public class CSE305 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        System.out.println(RegisterLoginForm().getEmail());
-
-    }
-
-    static User RegisterLoginForm() {
         int id;
         String name;
         String email;
@@ -85,9 +81,28 @@ public class CSE305 {
 
             }
             if (loggedUser != null) {
-                return loggedUser;
+                break;
             }
         }
-        return null;
+        if (loggedUser instanceof PropertyOwner) {
+            PropertyOwner owner = (PropertyOwner)loggedUser;
+            System.out.println(owner.getKey());
+        } else if(loggedUser instanceof Tenant) {
+            Tenant tenant = (Tenant)loggedUser;
+        }
+
+    }
+    private static void OwnerTerminal(PropertyOwner owner,Manager man) {
+        int command=0;
+        System.out.println("1.Add Property" + "\n" + "2.Delete Property" + '\n' + "3.Update Property"+'\n' + "4.Exit");
+        while(command!=4) {
+            switch (command) {
+                case 1:
+                    
+            }
+        }
+    }
+    private static void TenantTerminal(Tenant tenant,Manager man) {
+        
     }
 }

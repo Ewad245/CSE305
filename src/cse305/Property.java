@@ -25,4 +25,7 @@ public class Property {
     public void DeleteProperty() {
         
     }
+    public int getPropertyID() {
+        return PropertyID;
+    }
 }

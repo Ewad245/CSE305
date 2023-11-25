@@ -51,7 +51,12 @@ public class Manager {
         return null;
     }
     public void addProperty(PropertyOwner owner,PropertyBuilder builder) {
-        owner.getList().add(builder.buildProperty());
+        Property prop = new Property(builder);
+        listOwner.get(listOwner.indexOf(owner)).getList().add(prop);
+    }
+    public void deleteProperty(PropertyOwner owner,int PropID) {
+        Property prop =listOwner.get(listOwner.indexOf(owner)).findPropertyByID(PropID);
+        listOwner.get(listOwner.indexOf(owner)).getList().remove(prop);
     }
 
 }
